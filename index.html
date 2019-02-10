@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogin.</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="screen" onclick="toggleMenu()"></div>
+    <header class="main-header">
+        <div class="header-content flex space-between wrapper align-center">
+            <a href="/" class="logo">Blogin<span class="logo-dot">.</span></a>
+            <button class="mobile-menu-button" onclick="toggleMenu()">☰</button>
+            <nav class="main-nav flex">
+                <div class="jurnal-dropdown">
+                    <a href="#" class="jurnal flex align-center space-center">Journal</a>
+                    <div class="dropdown-items flex-col">
+                        <a href="#" class="align-center space-center">October 2016 </a>
+                        <a href="#" class="align-center space-center"> January 2017</a>
+                        <a href="#" class="align-center space-center">April 2017</a>
+                        <a href="#" class="align-center space-center">July 2018</a>
+                    </div>
+                </div>
+                <a href="#" class="flex align-center space-center">About</a>
+                <a href="#" class="flex align-center space-center">Work</a>
+                <a href="#" class="flex align-center space-center">Contant</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper flex wrap space-between">
+        <div class="blog-container ">
+            <div class="blog-item flex">
+                <img class="blog-image" src="img/1.jpg" alt="">
+                <div class="blog-content flex-col space-between">
+                    <h2 class="blog-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="blog-text1">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commo doconsequat, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="blog-text2">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur...
+                    </p>
+                    <button class="btn blog-btn" onclick="toggleModal()">Continue Reading
+                        <span class="btn-arrow"><img src="img/arrow.png"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="blog-item flex">
+                <img class="blog-image" src="img/2.jpg" alt="">
+                <div class="blog-content flex-col space-between">
+                    <h2 class="blog-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="blog-text1">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commo doconsequat, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="blog-text2">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur...
+                    </p>
+                    <button class="btn blog-btn" onclick="toggleModal()">Continue Reading
+                        <span class="btn-arrow"><img src="img/arrow.png"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="blog-item flex">
+                <img class="blog-image" src="img/3.jpg" alt="">
+                <div class="blog-content flex-col space-between">
+                    <h2 class="blog-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="blog-text1">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commo doconsequat, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="blog-text2">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur...
+                    </p>
+                    <button class="btn blog-btn" onclick="toggleModal()">Continue Reading
+                        <span class="btn-arrow"><img src="img/arrow.png"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="pagination flex space-between">
+                <div class="btn btn-pagination flex align-center">
+                    <img src="img/arrow-left.png">
+                    <div class="prev">previous</div>
+                </div>
+                <div class="btn btn-pagination flex align-center">
+                    <div class="next">next</div>
+                    <img src="img/arrow-right.png">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="flex-col align-center">
+        <a href="/" class="logo">Blogin<span class="logo-dot">.</span></a>
+        <p class="footer-text">© 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+            <a class="pixelhint" href="http://www.pixelhint.com" target="_blank">Pixelhint.com</a>
+        </p>
+        <div class="social flex align-center">
+            <button class="btn social-btn f-btn"><img src="img/f.png"></button>
+            <button class="btn social-btn t-btn"><img src="img/T.png"></button>
+            <button class="btn social-btn be-btn"><img src="img/Be.png"></button>
+            <button class="btn social-btn b-btn"><img src="img/B.png"></button>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal">
+        <div class="modal-container">
+            <span class="btn-close-modal" onclick="toggleModal()">&times;</span>
+            <div class="modal-content flex-col align-center">
+                <p>Join us to get access to the latest stories!</p>
+                <input type="email" placeholder="Enter your email address" required>
+                <button class="btn modal-btn-submit" type="submit" onclick="toggleModal()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('open');
+        }
+
+        function toggleModal() {
+            var elModal = document.querySelector('.modal');
+            elModal.classList.toggle('show');
+        }
+
+    </script>
+
+
+</body>
+
+</html>
